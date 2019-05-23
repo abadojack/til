@@ -1,1 +1,85 @@
-Hello world!
+!!!
+%html.no-js
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "abadojack@gmail.com", :name => "author"}/
+    %title Today I learned
+    /
+      Mobile Specific Meta
+      \==================================================
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / Favicon
+    %link{:href => "images/favicon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    /
+      CSS
+      \==================================================
+    / bootstrap.min css
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    / Main Stylesheet
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+  %body#body
+    /
+      Start Preloader
+      \====================================
+    #preloader
+      .preloader
+        .sk-circle1.sk-child
+        .sk-circle2.sk-child
+        .sk-circle3.sk-child
+        .sk-circle4.sk-child
+        .sk-circle5.sk-child
+        .sk-circle6.sk-child
+        .sk-circle7.sk-child
+        .sk-circle8.sk-child
+        .sk-circle9.sk-child
+        .sk-circle10.sk-child
+        .sk-circle11.sk-child
+        .sk-circle12.sk-child
+    /
+      End Preloader
+      \====================================
+    /
+      Fixed Navigation
+      \====================================
+    %section.header.navigation
+      .container
+        .row
+          .col-md-12
+            %nav.navbar.navbar-expand-md
+              %a.navbar-brand{:href => "index.html"}
+                %img{:alt => "logo", :src => "images/logo.png"}/
+              %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+                %span.tf-ion-android-menu
+    /
+      Welcome Slider
+      \====================================
+    %section.hero-area
+      .container
+        .row
+          .col-md-6
+            .video-player
+              %img.img-fluid.rounded{:alt => "", :src => "https://img.youtube.com/embed/g3-VxLQO7do/0.jpg"}/
+              %a.play-icon{:href => "javascript:void(0)"}
+                %i{"data-video" => "https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"}
+          .col-md-6
+            .block
+              %h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quo dolor est incidunt suscipit minima, alias numquam voluptatum rerum porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore at laboriosam unde repellat id expedita quae quisquam libero officia consequatur.
+              %ul.list-inline.wow.fadeInUp{"data-wow-delay" => ".7s", "data-wow-duration" => ".5s"}
+                %li.list-inline-item
+                  %a.btn.btn-main{:href => "wikipedia.com", :target => "_blank"} Read more
+    /
+      Essential Scripts
+      \=====================================
+    / Main jQuery
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"}
+    / Bootstrap 3.7
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+    / Custom js
+    :javascript
+      (function ($) { "use strict";
+      $(window).on("load",function(){
+      $('#preloader').fadeOut('slow',function(){$(this).remove();});
+      });
+      })(jQuery);
