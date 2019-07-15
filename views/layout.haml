@@ -1,0 +1,14 @@
+!!! 5
+%html
+  - TITLE = "Til"
+  %head
+    %title= TITLE
+    %link{ rel: "stylesheet", href: "/css/main.css" }
+    =# partial :metas
+
+  %body
+    #container
+      %header
+      %nav
+      %section.content= yield
+    %script{ type: "text/javascript", src: "/js/app.js" }
