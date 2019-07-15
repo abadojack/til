@@ -10,11 +10,13 @@ class Til < Sinatra::Base
   include Voidtools::Sinatra::ViewHelpers
 
   get "/" do
-    response = open('https://randomuselessfact.appspot.com/random.json?language=en').read
-    parsed = JSON.parse(response)
-    parsed_dup = parsed["text"].dup
-    puts parsed_dup
-    haml :index, :locals => {:info_text => parsed["text"], :href => parsed["source_url"]}
+    fact = random_facts
+    haml :index, :locals => {:info_text => fact["text"], :href => fact["source_url"]}
+  end
+
+  def self.random_facts
+      response = open('https://randomuselessfact.appspot.com/random.json?language=en').read
+      JSON.parse(response)
   end
 end
 
