@@ -10,7 +10,7 @@ class Til < Sinatra::Base
   include Voidtools::Sinatra::ViewHelpers
 
   get "/" do
-    fact = random_facts
+    fact = Til.random_facts
     haml :index, :locals => {:info_text => fact["text"], :href => fact["source_url"]}
   end
 
