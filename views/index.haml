@@ -46,7 +46,7 @@
         .row
           .col-md-12
             %nav.navbar.navbar-expand-md
-              %a.navbar-brand{:href => "index.html"}
+              %a.navbar-brand{:href => "/"}
                 %img{:alt => "logo", :src => "images/logo.png"}/
               %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
                 %span.tf-ion-android-menu
@@ -56,18 +56,12 @@
     %section.hero-area
       .container
         .row
-          .col-md-6
-            .video-player
-              %img.img-fluid.rounded{:alt => "", :src => "https://img.youtube.com/embed/g3-VxLQO7do/0.jpg"}/
-              %a.play-icon{:href => "javascript:void(0)"}
-                %i{"data-video" => "https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"}
-          .col-md-6
+          .col-md-4
             .block
-              %h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quo dolor est incidunt suscipit minima, alias numquam voluptatum rerum porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore at laboriosam unde repellat id expedita quae quisquam libero officia consequatur.
+              %h2= "#{info_text}"
               %ul.list-inline.wow.fadeInUp{"data-wow-delay" => ".7s", "data-wow-duration" => ".5s"}
                 %li.list-inline-item
-                  %a.btn.btn-main{:href => "wikipedia.com", :target => "_blank"} Read more
+                  %a.btn.btn-main{:href => "#{href}", :target => "_blank"} Read more
     /
       Essential Scripts
       \=====================================

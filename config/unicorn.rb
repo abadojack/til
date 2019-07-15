@@ -2,7 +2,7 @@
 timeout 10
 preload_app true
 
-apppath = '/home/patrick/Desenvolvimento/unicorn-test'
+apppath = Dir.pwd
 
 if GC.respond_to?(:copy_on_write_friendly=)
   GC.copy_on_write_friendly = true
